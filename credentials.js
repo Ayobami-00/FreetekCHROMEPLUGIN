@@ -1,9 +1,9 @@
 // TODO(DEVELOPER): Change the values below using values from the initialization snippet: Firebase Console > Overview > Add Firebase to your web app.
 // Initialize Firebase
 var config = {
-  apiKey: '<YOUR_API_KEY>',
-  databaseURL: '<YOUR_DATABASE_URL>',
-  storageBucket: '<YOUR_STORAGE_BUCKET_NAME>'
+  apiKey: 'AIzaSyBheoyoOSF7RQqnFDrHNGXSg9nSuzEorKY',
+  databaseURL: 'https://console.firebase.google.com/u/0/project/free-app-d2064/database/free-app-d2064/data',
+  //storageBucket: '<YOUR_STORAGE_BUCKET_NAME>'
 };
 firebase.initializeApp(config);
 
@@ -28,7 +28,9 @@ function initApp() {
     if (user) {
       // User is signed in.
       var displayName = user.displayName;
+      
       var email = user.email;
+      chrome.storage.sync.set({'Email': email});
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
