@@ -1,6 +1,6 @@
 $(function(){
-    chrome.storage.sync.get(['Email'],function(user){
-        $('#user').text(user.Username);
+    chrome.storage.sync.get(['username'],function(user){
+        $('#user').text(user.username);
     });
 
 });

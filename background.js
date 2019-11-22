@@ -3,7 +3,7 @@
 var config = {
   apiKey: 'AIzaSyBheoyoOSF7RQqnFDrHNGXSg9nSuzEorKY',
   databaseURL: 'https://console.firebase.google.com/u/0/project/free-app-d2064/database/free-app-d2064/data',
-  //storageBucket: '<YOUR_STORAGE_BUCKET_NAME>'
+  storageBucket: "free-app-d2064.appspot.com"
 };
 firebase.initializeApp(config);
 
@@ -37,12 +37,14 @@ window.onload = function() {
 
 // this file will run once on extension load
 var config = {
-  apiKey: "AIzaSyBheoyoOSF7RQqnFDrHNGXSg9nSuzEorKY",
-  authDomain: "[insert auth domain]",
-  databaseURL: 'https://console.firebase.google.com/u/0/project/free-app-d2064/database/free-app-d2064/data',
-  projectId: "[insert project id]",
-  //storageBucket: "[insert storage bucket]",
-  messagingSenderId: "[insert message sender id]"
+    apiKey: "AIzaSyBheoyoOSF7RQqnFDrHNGXSg9nSuzEorKY",
+    authDomain: "free-app-d2064.firebaseapp.com",
+    databaseURL: "https://free-app-d2064.firebaseio.com",
+    projectId: "free-app-d2064",
+    storageBucket: "free-app-d2064.appspot.com",
+    messagingSenderId: "567576616832",
+    appId: "1:567576616832:web:7a537f5be92ebf1fe86b65"
+  
 };
 const app = firebase.initializeApp(config);
 const appDb = app.database().ref();

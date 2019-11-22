@@ -13,9 +13,7 @@
     "default_popup": "popup.html"
   },
   "background": {
-    "pages": ["background.html","credentials.html"],
-    "persistence": true
-    
+    "pages": ["background.html","credentials.html"]
   },
   "permissions": [
     "identity",

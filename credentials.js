@@ -3,7 +3,7 @@
 var config = {
   apiKey: 'AIzaSyBheoyoOSF7RQqnFDrHNGXSg9nSuzEorKY',
   databaseURL: 'https://console.firebase.google.com/u/0/project/free-app-d2064/database/free-app-d2064/data',
-  //storageBucket: '<YOUR_STORAGE_BUCKET_NAME>'
+  storageBucket: "free-app-d2064.appspot.com"
 };
 firebase.initializeApp(config);
 
@@ -28,9 +28,8 @@ function initApp() {
     if (user) {
       // User is signed in.
       var displayName = user.displayName;
-      
+      chrome.storage.sync.set({'username': displayName});
       var email = user.email;
-      chrome.storage.sync.set({'Email': email});
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
